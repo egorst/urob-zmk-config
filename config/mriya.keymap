@@ -155,7 +155,7 @@
             label = "td0";
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&kp COLON>, <&assign>;
         };
         bhl: balanced_homerow_left {
