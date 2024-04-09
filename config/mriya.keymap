@@ -110,6 +110,12 @@
             require-prior-idle-ms = <150>;
             bindings = <&kp TAB>;
         };
+        combo_assign {
+            timeout-ms = <50>;
+            key-positions = <LM3 LM4>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp LS(SEMI) &kp EQUAL &kp SPACE>;
+        };
         combo_del {
             timeout-ms = <50>;
             key-positions = <8 9>;
@@ -219,17 +225,17 @@
             bindings = <
 &trans  &trans         &kp LS(N9)     &kp LS(N7)  &kp LS(N8)  &kp LS(N9)     &kp LS(N0)               &kp MINUS  &kp RS(LBKT)  &kp RS(RBKT)  &kp ENTER  &none      &none   &trans
         &mt LCTRL TAB  &td0           &kp LS(N4)  &kp LS(N5)  &kp LS(N6)     &kp PLUS                 &kp EQUAL  &kp LBKT      &kp RBKT   &none       &none  &trans /* &td0 */
-        &trans         &kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)     &kp LS(BACKSLASH)        &none      &kp RSHFT     &kp RCTRL  &kp RALT    &kp RWIN   &trans
+        &trans         &kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)     &kp BACKSLASH            &none      &kp RSHFT     &kp RCTRL  &kp RALT    &kp RWIN   &trans
                                       &kp LS(N9)  &kp LS(N0)  &kp LS(MINUS)  &trans                   &trans     &trans        &kp SPACE  &kp BSPC
             >;
         };
 
         NUMB {
             bindings = <
-&trans  &trans         &kp LS(N9)  &kp N7   &kp N8  &kp N9      &kp LS(N0)       &kp MINUS  &kp RS(LBKT)  &kp RS(RBKT)  &kp RS(SEMI)  &kp RS(N6)   &kp SPACE   &kp BSPC
-        &mt LCTRL TAB  &kp SEMI    &kp N4   &kp N5  &kp N6      &kp EQUAL        &kp PLUS   &kp LBKT      &kp RBKT      &kp J         &kp K        &kp ENTER
-        &trans         &kp UNDER   &kp N1   &kp N2  &kp N3      &kp SLASH        &kp RS(G)  &kp RSHFT     &kp RCTRL     &kp RALT      &kp RWIN     &kp RS(BACKSLASH)
-                                   &kp DOT  &kp N0  &kp LS(N8)  &kp LS(N5)       &trans     &trans        &trans        &kp ENTER
+&trans  &trans         &kp LS(N9)     &kp N7      &kp N8     &kp N9         &kp LS(N0)             &kp MINUS  &kp RS(LBKT)  &kp RS(RBKT)  &kp RS(SEMI)  &kp RS(N6)   &kp SPACE   &kp BSPC
+        &mt LCTRL TAB  &kp SEMI       &kp N4      &kp N5     &kp N6         &kp EQUAL              &kp PLUS   &kp LBKT      &kp RBKT      &kp J         &kp K        &kp ENTER
+        &trans         &kp UNDER      &kp N1      &kp N2     &kp N3         &kp SLASH              &kp RS(G)  &kp RSHFT     &kp RCTRL     &kp RALT      &kp RWIN     &kp RS(BACKSLASH)
+                                      &kp DOT     &kp N0     &kp LS(N8)     &kp LS(N5)             &trans     &trans        &trans        &kp ENTER
             >;
         };
 
