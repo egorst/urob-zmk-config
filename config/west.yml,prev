@@ -1,0 +1,11 @@
+manifest:
+  remotes:
+    - name: egorst
+      url-base: https://github.com/egorst
+  projects:
+    - name: zmk
+      remote: egorst
+      revision: main
+      import: app/west.yml
+  self:
+    path: config
