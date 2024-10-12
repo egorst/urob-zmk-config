@@ -4,7 +4,7 @@
 #include "keypos_46keys_mriya.h"
 #include "mouse.dtsi"
 
-#define DVORAK 0
+#define ENGRAM 0
 #define QWERTY 1
 #define NAVI 2
 #define MOUS 3
@@ -57,7 +57,7 @@
             label = "toeng";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&to DVORAK>, <&kp LA(LSHFT)>;
+            bindings = <&macro_tap>, <&to ENGRAM>, <&kp LA(LSHFT)>;
         };
     };
 
@@ -217,11 +217,11 @@
     keymap {
         compatible = "zmk,keymap";
 
-        DVORAK {
+        ENGRAM {
             bindings = <
-&kp ESC  &kp GRAVE      &kp SQT         &kp COMMA    &kp DOT        &kp P          &kp Y          &kp F          &kp G            &kp C            &kp R         &kp L        &kp SLASH        &mt RWIN RBKT
-         &mt LCTRL TAB  &kp A           &kp O        &kp E          &kp U          &kp I          &kp D          &kp H            &kp T            &kp N         &kp S        &mt RCTRL MINUS
-         &kt LSHFT      &bhl LWIN SEMI  &bhl LALT Q  &bhl LCTRL J   &bhl LSHFT K   &kp X          &kp B          &bhr RSHFT M     &bhr RCTRL W     &bhr RALT V   &bhr RWIN Z  &kp RSHFT
+&kp ESC  &kp GRAVE      &kp B           &kp Y        &kp O          &kp U          &kp SQT        &kp SEMI       &kp L            &kp D            &kp W         &kp V        &kp Z            &mt RWIN RBKT
+         &mt LCTRL TAB  &kp C           &kp I        &kp E          &kp A          &kp COMMA      &kp DOT        &kp H            &kp T            &kp S         &kp N        &mt RCTRL Q
+         &kt LSHFT      &bhl LWIN G     &bhl LALT X  &bhl LCTRL J   &bhl LSHFT K   &kp MINUS      &kp FSLH       &bhr RSHFT R     &bhr RCTRL M     &bhr RALT F   &bhr RWIN P  &kp RSHFT
                                         &kp LALT     &lt MOUS BSPC  &lt NAVI BSPC  &sk LSHFT      &lt SYMB BSPC  &lt NUMB SPACE   &lt FUNC DEL &sk RSHFT  
             >;
         };
@@ -275,7 +275,7 @@
 
         FUNC {
             bindings = <
-&trans  &trans         &kp F12   &kp F7   &kp F8  &kp F9  &kp PSCRN        &none      &to DVORAK  &none      &to QWERTY  &none     &none   &kp BSPC
+&trans  &trans         &kp F12   &kp F7   &kp F8  &kp F9  &kp PSCRN        &none      &to ENGRAM  &none      &to QWERTY  &none     &none   &kp BSPC
         &mt LCTRL TAB  &kp F11   &kp F4   &kp F5  &kp F6  &kp SLCK         &none      &toeng      &none      &torus      &none     &none
         &trans         &kp F10   &kp F1   &kp F2  &kp F3  &kp PAUSE_BREAK  &kp ENTER  &kp RSHFT   &kp RCTRL  &kp RALT    &kp RWIN  &trans
                                  &trans   &trans  &trans  &trans           &trans     &kp ENTER   &kp SPACE  &trans
