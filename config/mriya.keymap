@@ -221,7 +221,7 @@
             bindings = <
 &kp ESC  &kp GRAVE      &kp Z           &kp C        &kp W          &kp B         &kp J          &kp MINUS      &kp M           &kp U         &kp SQT          &kp Q          &kp EQUAL       &mt RWIN EXCL
          &mt LCTRL TAB  &kp D           &kp S        &kp T          &kp H         &kp K          &kp V          &kp N           &kp I         &kp A            &kp O          &mt RCTRL FSLH
-         &kp BLSH       &bhl LWIN F     &bhl LALT G  &bhl LCTRL P   &bhl LSHFT R  &kp SEMI       &kp X          &bhr RSHFT L    &bhr RCTRL Y  &bhr RALT COMMA  &bhr RWIN DOT  &kp ENTER
+         &kp BSLH       &bhl LWIN F     &bhl LALT G  &bhl LCTRL P   &bhl LSHFT R  &kp SEMI       &kp X          &bhr RSHFT L    &bhr RCTRL Y  &bhr RALT COMMA  &bhr RWIN DOT  &kp ENTER
                                         &key_repeat  &lt MOUS BSPC  &lt NAVI E    &sk LSHFT      &lt SYMB BSPC  &lt NUMB SPACE  &lt FUNC DEL  &sk RSHFT  
             >;
         };
