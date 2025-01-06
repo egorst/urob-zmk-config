@@ -5,9 +5,15 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <physical_layouts.dtsi>
 
-//#include <layouts/foostan/corne/6column.dtsi>
+/ {
+    key_physical_attrs: key_physical_attrs {
+        compatible = "zmk,key-physical-attrs";
+
+        #key-cells = <7>;
+    };
+};
+
 / {
     layouts_foostan_corne_position_map: layouts_foostan_corne_position_map {
         compatible = "zmk,physical-layout-position-map";
