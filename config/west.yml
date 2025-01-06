@@ -1,10 +1,10 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+    - name: egorst
+      url-base: https://github.com/egorst
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: egorst
       revision: main
       import: app/west.yml
   self:
