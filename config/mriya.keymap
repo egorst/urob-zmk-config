@@ -4,7 +4,7 @@
 #include "keypos_46keys_mriya.h"
 #include "mouse.dtsi"
 
-#define DSTHK 0
+#define DVORAK 0
 #define QWERTY 1
 #define NAVI 2
 #define MOUS 3
@@ -57,7 +57,7 @@
             label = "toeng";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&to DSTHK>, <&kp LA(LSHFT)>;
+            bindings = <&macro_tap>, <&to DVORAK>, <&kp LA(LSHFT)>;
         };
     };
 
@@ -217,21 +217,21 @@
     keymap {
         compatible = "zmk,keymap";
 
-        DSTHK {
+        DVORAK {
             bindings = <
-&kp ESC  &kp GRAVE      &kp Z           &kp C        &kp W          &kp B         &kp J          &kp MINUS      &kp M           &kp U         &kp SQT          &kp Q          &kp EQUAL       &mt RWIN EXCL
-         &mt LCTRL TAB  &kp D           &kp S        &kp T          &kp H         &kp K          &kp V          &kp N           &kp I         &kp A            &kp O          &mt RCTRL FSLH
-         &kp BSLH       &bhl LWIN F     &bhl LALT G  &bhl LCTRL P   &bhl LSHFT R  &kp SEMI       &kp X          &bhr RSHFT L    &bhr RCTRL Y  &bhr RALT COMMA  &bhr RWIN DOT  &kp ENTER
-                                        &key_repeat  &lt MOUS BSPC  &lt NAVI E    &sk LSHFT      &lt SYMB BSPC  &lt NUMB SPACE  &lt FUNC DEL  &sk RSHFT  
+&kp ESC  &kp GRAVE      &kp SQT         &kp COMMA      &kp DOT        &kp P          &kp Y                &kp F          &kp G           &kp C             &kp R          &kp L           &kp SLASH        &mt RWIN RBKT
+         &mt LCTRL TAB  &kp A           &kp O          &kp E          &kp U          &kp I                &kp D          &kp H           &kp T             &kp N          &kp S           &mt RCTRL MINUS
+         &kt LSHFT      &bhl LWIN SEMI  &bhl LALT Q    &bhl LCTRL J   &bhl LSHFT K   &kp X                &kp B          &bhr RSHFT M    &bhr RCTRL W      &bhr RALT V    &bhr RWIN Z     &kp RSHFT
+                                        &kp LALT       &lt MOUS BSPC  &lt NAVI BSPC  &sk LSHFT            &lt SYMB BSPC  &lt NUMB SPACE  &lt FUNC DEL      &sk RSHFT  
             >;
         };
 
         QWERTY {
             bindings = <
-&kp ESC  &kp GRAVE      &kp Q        &kp W        &kp E          &kp R          &kp T          &kp Y          &kp U           &kp I             &kp O          &kp P           &kp LBKT       &mt RWIN RBKT
-         &mt LCTRL TAB  &kp A        &kp S        &kp D          &kp F          &kp G          &kp H          &kp J           &kp K             &kp L          &kp SEMI        &mt RCTRL SQT
-         &kt LSHFT      &bhl LWIN Z  &bhl LALT X  &bhl LCTRL C   &bhl LSHFT V   &kp B          &kp N          &bhr RSHFT M    &bhr RCTRL COMMA  &bhr RALT DOT  &bhr RWIN FSLH  &kp RSHFT
-                                     &kp LALT     &lt MOUS BSPC  &lt NAVI BSPC  &sk LSHFT      &lt SYMB BSPC  &lt NUMB SPACE  &lt FUNC DEL      &sk RSHFT  
+&kp ESC  &kp GRAVE      &kp Q           &kp W          &kp E          &kp R          &kp T                &kp Y          &kp U           &kp I             &kp O          &kp P           &kp LBKT         &mt RWIN RBKT
+         &mt LCTRL TAB  &kp A           &kp S          &kp D          &kp F          &kp G                &kp H          &kp J           &kp K             &kp L          &kp SEMI        &mt RCTRL SQT
+         &kt LSHFT      &bhl LWIN Z     &bhl LALT X    &bhl LCTRL C   &bhl LSHFT V   &kp B                &kp N          &bhr RSHFT M    &bhr RCTRL COMMA  &bhr RALT DOT  &bhr RWIN FSLH  &kp RSHFT
+                                        &kp LALT       &lt MOUS BSPC  &lt NAVI BSPC  &sk LSHFT            &lt SYMB BSPC  &lt NUMB SPACE  &lt FUNC DEL      &sk RSHFT  
             >;
         };
 
@@ -239,55 +239,55 @@
 // for russian layout
 // S(KC_4) -> ;    S(KC_2) -> "    KC_SLSH -> .   S(KC_SLSH) -> ,  S(KC_7) -> ?    S(KC_1) -> !   S(KC_6) -> :
             bindings = <
-&trans  &trans         &kp LS(N2)  &kp LS(SLASH)  &kp SLASH  &kp LS(N7)  &kp LS(N1)         &none     &kp RS(LBKT)  &kp RS(RBKT)  &kp ENTER  &none    &none   &trans
-        &mt LCTRL TAB  &none       &torus         &none      &toeng      &none              &kp LEFT  &kp DOWN      &kp UP        &kp RIGHT  &none    &none
-        &trans         &kp LWIN    &kp LALT       &kp LCTRL  &kp LSHFT   &none              &kp INS   &kp PG_DN     &kp PG_UP     &kp HOME   &kp END  &trans
-                                   &trans         &trans     &trans      &trans             &kp BSPC  &kp SPACE     &kp DEL   &trans
+&trans   &trans         &kp LS(N2)      &kp LS(SLASH)  &kp SLASH      &kp LS(N7)     &kp LS(N1)            &none         &kp RS(LBKT)    &kp RS(RBKT)      &kp ENTER      &none           &none            &trans
+         &mt LCTRL TAB  &none           &torus         &none          &toeng         &none                 &kp LEFT      &kp DOWN        &kp UP            &kp RIGHT      &none           &none
+         &trans         &kp LWIN        &kp LALT       &kp LCTRL      &kp LSHFT      &none                 &kp INS       &kp PG_DN       &kp PG_UP         &kp HOME       &kp END         &trans
+                                        &trans         &trans         &trans         &trans                &kp BSPC      &kp SPACE       &kp DEL           &trans
             >;
         };
 
         MOUS {
             bindings = <
-&trans  &trans         &kp F12   &kp F7   &kp F8  &kp F9  &kp PSCRN        &none      U_WH_D      U_MS_U     U_WH_U      &none     &none   &kp BSPC
-        &mt LCTRL TAB  &kp F11   &kp F4   &kp F5  &kp F6  &kp SLCK         &none      U_MS_L      U_MS_D     U_MS_R      &none     &none
-        &trans         &kp F10   &kp F1   &kp F2  &kp F3  &kp PAUSE_BREAK  &kp ENTER  &kp RSHFT   &kp RCTRL  &kp RALT    &kp RWIN  &trans
-                                 &trans   &trans  &trans  &trans           &trans     &mkp LCLK   &mkp RCLK  &trans
+&trans   &trans         &kp F12         &kp F7         &kp F8         &kp F9         &kp PSCRN             &none         U_WH_D         U_MS_U             U_WH_U         &none           &none            &kp BSPC
+         &mt LCTRL TAB  &kp F11         &kp F4         &kp F5         &kp F6         &kp SLCK              &none         U_MS_L         U_MS_D             U_MS_R         &none           &none
+         &trans         &kp F10         &kp F1         &kp F2         &kp F3         &kp PAUSE_BREAK       &kp ENTER     &kp RSHFT      &kp RCTRL          &kp RALT       &kp RWIN        &trans
+                                        &trans         &trans         &trans         &trans                &trans        &mkp LCLK      &mkp RCLK          &trans
             >;
         };
 
         SYMB {
             bindings = <
-&trans  &trans         &kp LS(N9)     &kp LS(N7)  &kp LS(N8)  &kp LS(N9)     &kp LS(N0)               &kp MINUS  &kp RS(LBKT)  &kp RS(RBKT)  &kp ENTER  &none      &none   &trans
-        &mt LCTRL TAB  &td0           &kp LS(N4)  &kp LS(N5)  &kp LS(N6)     &kp EQUAL                &kp PLUS   &kp LBKT      &kp RBKT   &none       &none  &trans /* &td0 */
-        &trans         &kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)     &kp BACKSLASH            &none      &kp RSHFT     &kp RCTRL  &kp RALT    &kp RWIN   &trans
-                                      &kp LS(N9)  &kp LS(N0)  &kp LS(MINUS)  &trans                   &trans     &trans        &kp SPACE  &kp BSPC
+&trans   &trans         &kp LS(N9)      &kp LS(N7)     &kp LS(N8)     &kp LS(N9)     &kp LS(N0)             &kp MINUS    &kp RS(LBKT)   &kp RS(RBKT)       &kp ENTER      &none           &none            &trans
+         &mt LCTRL TAB  &td0            &kp LS(N4)     &kp LS(N5)     &kp LS(N6)     &kp EQUAL              &kp PLUS     &kp LBKT       &kp RBKT           &none          &none           &trans
+         &trans         &kp LS(GRAVE)   &kp LS(N1)     &kp LS(N2)     &kp LS(N3)     &kp BACKSLASH          &none        &kp RSHFT      &kp RCTRL          &kp RALT       &kp RWIN        &trans
+                                        &kp LS(N9)     &kp LS(N0)     &kp LS(MINUS)  &trans                 &trans       &trans         &kp SPACE          &kp BSPC
             >;
         };
 
         NUMB {
             bindings = <
-&trans  &trans         &kp LS(N9)     &kp N7      &kp N8     &kp N9         &kp LS(N0)             &kp MINUS  &kp RS(LBKT)  &kp RS(RBKT)  &kp RS(SEMI)  &kp RS(N6)   &kp SPACE   &kp BSPC
-        &mt LCTRL TAB  &kp SEMI       &kp N4      &kp N5     &kp N6         &kp EQUAL              &kp PLUS   &kp LBKT      &kp RBKT      &kp J         &kp K        &kp ENTER
-        &trans         &kp UNDER      &kp N1      &kp N2     &kp N3         &kp SLASH              &kp RS(G)  &kp RSHFT     &kp RCTRL     &kp RALT      &kp RWIN     &kp RS(BACKSLASH)
-                                      &kp DOT     &kp N0     &kp LS(N8)     &kp LS(N5)             &trans     &trans        &trans        &kp ENTER
+&trans   &trans         &kp LS(N8)      &kp N7         &kp N8         &kp N9         &kp EQUAL              &kp RS(N0)   &kp RS(LBKT)   &kp RS(RBKT)       &kp RS(SEMI)   &kp RS(N6)      &kp SPACE        &kp BSPC
+         &mt LCTRL TAB  &kp SEMI        &kp N4         &kp N5         &kp N6         &kp LS(EQUAL)          &kp RS(N9)   &kp LBKT       &kp RBKT           &kp J          &kp K           &kp ENTER
+         &trans         &kp SLASH       &kp N1         &kp N2         &kp N3         &kp MINUS              &kp RS(SQT)  &kp RSHFT      &kp RCTRL          &kp RALT       &kp RWIN        &kp RS(BACKSLASH)
+                                        &kp LS(N5)     &kp COMMA      &kp N0         &kp DOT                &trans       &trans         &trans             &kp ENTER
             >;
         };
 
         FUNC {
             bindings = <
-&trans  &trans         &kp F12   &kp F7   &kp F8  &kp F9  &kp PSCRN        &none      &to DSTHK  &none      &to QWERTY  &none     &none   &kp BSPC
-        &mt LCTRL TAB  &kp F11   &kp F4   &kp F5  &kp F6  &kp SLCK         &none      &toeng      &none      &torus      &none     &none
-        &trans         &kp F10   &kp F1   &kp F2  &kp F3  &kp PAUSE_BREAK  &kp ENTER  &kp RSHFT   &kp RCTRL  &kp RALT    &kp RWIN  &trans
-                                 &trans   &trans  &trans  &trans           &trans     &kp ENTER   &kp SPACE  &trans
+&trans   &trans         &kp F12         &kp F7         &kp F8         &kp F9         &kp PSCRN              &none        &to DVORAK     &none              &to QWERTY     &none           &none            &kp BSPC
+         &mt LCTRL TAB  &kp F11         &kp F4         &kp F5         &kp F6         &kp SLCK               &none        &toeng         &none              &torus         &none           &none
+         &trans         &kp F10         &kp F1         &kp F2         &kp F3         &kp PAUSE_BREAK        &kp ENTER    &kp RSHFT      &kp RCTRL          &kp RALT       &kp RWIN        &trans
+                                        &trans         &trans         &trans         &trans                 &trans       &kp ENTER      &kp SPACE          &trans
             >;
         };
 
         ADJU {
             bindings = <
-&none  &bootloader    &none         &none         &none         &none         &none           &none         &none         &none         &none         &none          &bootloader  &none
-       &bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0   &bt BT_CLR
-       &sys_reset     &none         &none         &none         &none         &none           &none         &none         &none         &none         &none          &sys_reset
-                                    &none         &trans        &none         &trans          &none         &none         &none         &none
+&none    &bootloader    &none           &none          &none          &none         &none                   &none         &none         &none              &none          &none           &bootloader      &none
+         &bt BT_CLR     &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4            &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2       &bt BT_SEL 1   &bt BT_SEL 0    &bt BT_CLR
+         &sys_reset     &none           &none          &none          &none         &none                   &none         &none         &none              &none          &none           &sys_reset
+                                        &none          &trans         &none         &trans                  &none         &none         &none              &none
             >;
         };
 
