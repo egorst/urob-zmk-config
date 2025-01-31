@@ -118,19 +118,19 @@
 //        };
         combo_assign {
             timeout-ms = <18>;
-            key-positions = <LM3 LM4>;
+            key-positions = <LM2 LM3>;
             require-prior-idle-ms = <150>;
             bindings = <&assign>;
         };
         combo_del {
             timeout-ms = <18>;
-            key-positions = <8 9>;
+            key-positions = <RT1 RT2>;
             require-prior-idle-ms = <150>;
             bindings = <&kp DEL>;
         };
         combo_bspc {
             timeout-ms = <18>;
-            key-positions = <9 10>;
+            key-positions = <RT2 RT3>;
             require-prior-idle-ms = <150>;
             bindings = <&kp BSPC>;
         };
@@ -245,7 +245,7 @@
 // for russian layout
 // S(KC_4) -> ;    S(KC_2) -> "    KC_SLSH -> .   S(KC_SLSH) -> ,  S(KC_7) -> ?    S(KC_1) -> !   S(KC_6) -> :
             bindings = <
-&trans   &trans         &kp LS(N2)      &kp LS(SLASH)  &kp SLASH      &kp LS(N7)     &kp LS(N1)            &none         &kp RS(LBKT)    &kp RS(RBKT)      &kp ENTER      &kp RS(N6)      &none            &trans
+&trans   &trans         &kp LS(N2)      &kp LS(SLASH)  &kp PIPE       &kp LS(N7)     &kp LS(N1)            &none         &kp RS(LBKT)    &kp RS(RBKT)      &kp ENTER      &kp RS(N6)      &none            &trans
          &mt LCTRL TAB  &kp DOT         &kp SLASH      &torus         &toeng         &up_dir               &kp LEFT      &kp DOWN        &kp UP            &kp RIGHT      &kp RS(N4)      &none
          &trans         &kp LWIN        &kp LALT       &kp LCTRL      &kp LSHFT      &none                 &kp INS       &kp PG_DN       &kp PG_UP         &kp HOME       &kp END         &trans
                                         &trans         &trans         &trans         &trans                &kp BSPC      &kp SPACE       &kp DEL           &trans
@@ -273,8 +273,8 @@
         NUMB {
             bindings = <
 &trans   &trans         &kp LS(N8)      &kp N7         &kp N8         &kp N9         &kp EQUAL              &kp RS(N0)   &kp RS(LBKT)   &kp RS(RBKT)       &kp ENTER      &kp RS(N6)      &kp SLASH        &kp BSPC
-         &mt LCTRL TAB  &kp SEMI        &kp N4         &kp N5         &kp N6         &kp LS(EQUAL)          &kp RS(N9)   &kp LBKT       &kp RBKT           &kp RS(N5)     &kp RS(N4)      &kp PIPE
-         &trans         &kp SLASH       &kp N1         &kp N2         &kp N3         &kp MINUS              &kp RS(SQT)  &kp RSHFT      &kp RCTRL          &kp RALT       &kp RWIN        &kp SPACE
+         &mt LCTRL TAB  &kp SLASH       &kp N4         &kp N5         &kp N6         &kp LS(EQUAL)          &kp RS(N9)   &kp LBKT       &kp RBKT           &kp RS(N5)     &kp RS(N4)      &kp PIPE
+         &trans         &kp SEMI        &kp N1         &kp N2         &kp N3         &kp MINUS              &kp RS(SQT)  &kp RSHFT      &kp RCTRL          &kp RALT       &kp RWIN        &kp SPACE
                                         &kp LS(N5)     &kp COMMA      &kp N0         &kp DOT                &trans       &trans         &trans             &kp ENTER
             >;
         };
