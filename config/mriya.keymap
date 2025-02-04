@@ -272,10 +272,10 @@
 
         NUMB {
             bindings = <
-&trans   &trans         &kp LS(N8)      &kp N7         &kp N8         &kp N9         &kp EQUAL              &kp RS(N0)   &kp RS(LBKT)   &kp RS(RBKT)       &kp ENTER      &kp RS(N6)      &kp SLASH        &kp BSPC
-         &mt LCTRL TAB  &kp SLASH       &kp N4         &kp N5         &kp N6         &kp LS(EQUAL)          &kp RS(N9)   &kp LBKT       &kp RBKT           &kp RS(N5)     &kp RS(N4)      &kp PIPE
-         &trans         &kp SEMI        &kp N1         &kp N2         &kp N3         &kp MINUS              &kp RS(SQT)  &kp RSHFT      &kp RCTRL          &kp RALT       &kp RWIN        &kp SPACE
-                                        &kp LS(N5)     &kp COMMA      &kp N0         &kp DOT                &trans       &trans         &trans             &kp ENTER
+&trans   &trans         &kp LS(N8)      &kp N7         &kp N8         &kp N9         &kp EQUAL              &kp RS(N7)   &kp RS(LBKT)       &kp RS(RBKT)       &kp ENTER      &kp RS(N6)      &kp SLASH        &kp BSPC
+         &mt LCTRL TAB  &kp SLASH       &kp N4         &kp N5         &kp N6         &kp LS(EQUAL)          &kp PIPE     &kp LBKT           &kp RBKT           &kp RS(N5)     &kp RS(N4)      &kp PIPE
+         &trans         &kp SEMI        &kp N1         &kp N2         &kp N3         &kp MINUS              &kp RS(SQT)  &bhr RSHFT RS(N9)  &bhr RCTRL RS(N0)  &kp RALT       &kp RWIN        &kp SPACE
+                                        &kp LS(N5)     &kp COMMA      &kp N0         &kp DOT                &trans       &trans             &trans             &kp ENTER
             >;
         };
 
