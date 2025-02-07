@@ -245,10 +245,10 @@
 // for russian layout
 // S(KC_4) -> ;    S(KC_2) -> "    KC_SLSH -> .   S(KC_SLSH) -> ,  S(KC_7) -> ?    S(KC_1) -> !   S(KC_6) -> :
             bindings = <
-&trans   &trans         &kp LS(N2)        &kp LS(SLASH)     &kp SLASH      &kp LS(N7)     &kp LS(N1)            &kp RS(SEMI)  &kp RS(LBKT)    &kp RS(RBKT)      &kp ENTER      &kp RS(N6)      &none            &trans
-         &mt LCTRL TAB  &kp LS(N6)        &kp LS(N9)        &torus         &toeng         &up_dir               &kp LEFT      &kp DOWN        &kp UP            &kp RIGHT      &kp RS(N4)      &none
-         &trans         &bhl LWIN LS(N4)  &bhl LALT LS(N0)  &kp LCTRL      &kp LSHFT      &none                 &kp INS       &kp PG_DN       &kp PG_UP         &kp HOME       &kp END         &trans
-                                          &trans            &trans         &trans         &trans                &kp BSPC      &kp SPACE       &kp DEL           &trans
+&trans   &trans         &kp LS(N2)        &kp LS(SLASH)  &kp SLASH          &kp LS(N7)         &kp LS(N1)            &kp RS(SEMI)  &kp RS(LBKT)    &kp RS(RBKT)      &kp ENTER      &kp RS(N6)      &none            &trans
+         &mt LCTRL TAB  &kp LS(N6)        &kp LS(MINUS)  &torus             &toeng             &up_dir               &kp LEFT      &kp DOWN        &kp UP            &kp RIGHT      &kp RS(N4)      &kp BSLH
+         &trans         &bhl LWIN LS(N4)  &kp LALT       &bhl LCTRL LS(N9)  &bhl LSHFT LS(N0)  &none                 &kp INS       &kp PG_DN       &kp PG_UP         &kp HOME       &kp END         &trans
+                                          &trans         &trans             &trans             &trans                &kp BSPC      &kp SPACE       &kp DEL           &trans
             >;
         };
 
@@ -264,8 +264,8 @@
         SYMB {
             bindings = <
 &trans   &trans         &kp LS(N9)      &kp LS(N7)     &kp LS(N8)     &kp LS(N9)     &kp LS(N0)             &kp MINUS    &kp RS(LBKT)   &kp RS(RBKT)       &kp ENTER      &none           &none            &trans
-         &mt LCTRL TAB  &td0            &kp LS(N4)     &kp LS(N5)     &kp LS(N6)     &kp EQUAL              &kp PLUS     &kp LBKT       &kp RBKT           &none          &none           &trans
-         &trans         &kp LS(GRAVE)   &kp LS(N1)     &kp LS(N2)     &kp LS(N3)     &kp BACKSLASH          &none        &kp RSHFT      &kp RCTRL          &kp RALT       &kp RWIN        &trans
+         &mt LCTRL TAB  &td0            &kp LS(N4)     &kp LS(N5)     &kp LS(N6)     &kp EQUAL              &kp PLUS     &kp LBKT       &kp RBKT           &kp BSLH       &none           &trans
+         &trans         &kp LS(GRAVE)   &kp LS(N1)     &kp LS(N2)     &kp LS(N3)     &kp SLASH              &none        &kp RSHFT      &kp RCTRL          &kp RALT       &kp RWIN        &trans
                                         &kp LS(N9)     &kp LS(N0)     &kp LS(MINUS)  &trans                 &trans       &trans         &kp SPACE          &kp BSPC
             >;
         };
