@@ -245,10 +245,10 @@
 // for russian layout
 // S(KC_4) -> ;    S(KC_2) -> "    KC_SLSH -> .   S(KC_SLSH) -> ,  S(KC_7) -> ?    S(KC_1) -> !   S(KC_6) -> :
             bindings = <
-&trans   &trans         &kp LS(N2)      &kp LS(SLASH)  &kp PIPE       &kp LS(N7)     &kp LS(N1)            &kp RS(SEMI)  &kp RS(LBKT)    &kp RS(RBKT)      &kp ENTER      &kp RS(N6)      &none            &trans
-         &mt LCTRL TAB  &kp DOT         &kp SLASH      &torus         &toeng         &up_dir               &kp LEFT      &kp DOWN        &kp UP            &kp RIGHT      &kp RS(N4)      &none
-         &trans         &kp LWIN        &kp LALT       &kp LCTRL      &kp LSHFT      &none                 &kp INS       &kp PG_DN       &kp PG_UP         &kp HOME       &kp END         &trans
-                                        &trans         &trans         &trans         &trans                &kp BSPC      &kp SPACE       &kp DEL           &trans
+&trans   &trans         &kp LS(N2)        &kp LS(SLASH)     &kp SLASH      &kp LS(N7)     &kp LS(N1)            &kp RS(SEMI)  &kp RS(LBKT)    &kp RS(RBKT)      &kp ENTER      &kp RS(N6)      &none            &trans
+         &mt LCTRL TAB  &kp LS(N6)        &kp LS(N9)        &torus         &toeng         &up_dir               &kp LEFT      &kp DOWN        &kp UP            &kp RIGHT      &kp RS(N4)      &none
+         &trans         &bhl LWIN LS(N4)  &bhl LALT LS(N0)  &kp LCTRL      &kp LSHFT      &none                 &kp INS       &kp PG_DN       &kp PG_UP         &kp HOME       &kp END         &trans
+                                          &trans            &trans         &trans         &trans                &kp BSPC      &kp SPACE       &kp DEL           &trans
             >;
         };
 
@@ -273,7 +273,7 @@
         NUMB {
             bindings = <
 &trans   &trans         &kp LS(N8)      &kp N7         &kp N8         &kp N9         &kp EQUAL              &kp RS(N7)   &kp RS(LBKT)       &kp RS(RBKT)       &kp ENTER      &kp RS(N6)      &kp SLASH        &kp BSPC
-         &mt LCTRL TAB  &kp SLASH       &kp N4         &kp N5         &kp N6         &kp LS(EQUAL)          &kp PIPE     &kp LBKT           &kp RBKT           &kp RS(N5)     &kp RS(N4)      &kp PIPE
+         &mt LCTRL TAB  &kp SLASH       &kp N4         &kp N5         &kp N6         &kp LS(EQUAL)          &kp PIPE     &kp LBKT           &kp RBKT           &kp RS(N5)     &kp RS(N4)      &kp BACKSLASH
          &trans         &kp SEMI        &kp N1         &kp N2         &kp N3         &kp MINUS              &kp RS(SQT)  &bhr RSHFT RS(N9)  &bhr RCTRL RS(N0)  &kp RALT       &kp RWIN        &kp SPACE
                                         &kp LS(N5)     &kp COMMA      &kp N0         &kp DOT                &trans       &trans             &trans             &kp ENTER
             >;
