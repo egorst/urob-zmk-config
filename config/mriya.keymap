@@ -226,8 +226,8 @@
         DVORAK {
             bindings = <
 &kp ESC  &kp GRAVE      &kp SQT         &kp COMMA      &kp DOT             &kp P          &kp Y                &kp F           &kp G           &kp C          &kp R        &kp L           &kp SLASH        &mt RWIN RBKT
-         &mt LCTRL TAB  &bhl LWIN A     &bhl LALT O    &bhl LCTRL E        &bhl LSHFT U   &kp I                &kp D           &bhr RSHFT H    &bhr RCTRL T   &bhr RALT N  &bhr RWIN S   &kp MINUS
-         &kp BSLH       &kp SEMI        &kp Q          &kp J               &kp K          &kp X                &kp B           &kp M           &kp W          &kp V        &kp Z         &kp ENTER
+         &mt LCTRL TAB  &kp A           &kp O          &kp E               &kp U          &kp I                &kp D           &kp H           &kp T          &kp N        &kp S           &kp MINUS
+         &kp BSLH       &bhl LWIN SEMI  &bhl LALT Q    &bhl LCTRL J        &bhl LSHFT K   &kp X                &kp B           &bhr RSHFT M    &bhr RCTRL W   &bhr RALT V  &bhr RWIN Z     &kp ENTER
                                         &kp LALT       &lt MOUS LS(MINUS)  &lt NAVI BSPC  &sk LSHFT            &lt SYMB SPACE  &lt NUMB SPACE  &lt FUNC DEL   &sk RSHFT  
             >;
         };
@@ -247,7 +247,7 @@
             bindings = <
 &trans   &trans         &kp LS(N2)        &kp LS(SLASH)  &kp SLASH          &kp LS(N7)         &kp LS(N1)            &kp RS(SEMI)  &kp RS(LBKT)    &kp RS(RBKT)      &kp ENTER      &kp RS(N6)      &none            &trans
          &mt LCTRL TAB  &kp LS(N6)        &kp LS(MINUS)  &torus             &toeng             &up_dir               &kp LEFT      &kp DOWN        &kp UP            &kp RIGHT      &kp RS(N4)      &kp BSLH
-         &trans         &bhl LWIN LS(N4)  &kp LALT       &bhl LCTRL LS(N9)  &bhl LSHFT LS(N0)  &none                 &kp INS       &kp PG_DN       &kp PG_UP         &kp HOME       &kp END         &trans
+         &trans         &bhl LWIN LS(N4)  &kp LALT       &bhl LCTRL LS(N9)  &bhl LSHFT LS(N0)  &none                 &kp INS       &kp PG_UP       &kp PG_DN         &kp HOME       &kp END         &trans
                                           &trans         &trans             &trans             &trans                &kp BSPC      &kp SPACE       &kp DEL           &trans
             >;
         };
@@ -291,7 +291,7 @@
         ADJU {
             bindings = <
 &none    &bootloader    &kp A           &kp D          &kp J          &none         &none                   &none         &none         &none              &none          &none           &bootloader      &none
-         &bt BT_CLR     &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4            &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2       &bt BT_SEL 1   &bt BT_SEL 0    &bt BT_CLR
+         &bt BT_CLR     &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4            &none         &kp RA(TAB) &kp RA(RS(TAB))      &none          &none           &bt BT_CLR
          &sys_reset     &none           &none          &none          &none         &none                   &none         &none         &none              &none          &none           &sys_reset
                                         &none          &trans         &none         &trans                  &none         &none         &none              &none
             >;
