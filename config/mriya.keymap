@@ -292,7 +292,7 @@
             bindings = <
 &none    &bootloader    &kp A           &kp D          &kp J          &none         &none                      &none         &none         &none              &none          &none           &bootloader      &none
          &bt BT_CLR     &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4               &none         &kp TAB       &kp RS(TAB)        &none          &none           &bt BT_CLR
-         &sys_reset     &none           &kt LALT       &kt LCTRL      &kt LSHFT     &none                      &none         &none         &none              &none          &none           &sys_reset
+         &sys_reset     &bt BT_CLR      &kt LALT       &kt LCTRL      &kt LSHFT     &none                      &none         &none         &none              &none          &none           &sys_reset
                                         &none          &trans         &none         &trans                     &none         &none         &none              &none
             >;
         };
