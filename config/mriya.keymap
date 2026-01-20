@@ -4,7 +4,7 @@
 #include "keypos_46keys_mriya.h"
 #include "mouse.dtsi"
 
-#define DVORAK 0
+#define HDPROM 0
 #define QWERTY 1
 #define NAVI 2
 #define MOUS 3
@@ -63,7 +63,7 @@
             label = "toeng";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&to DVORAK>, <&kp LA(LSHFT)>;
+            bindings = <&macro_tap>, <&to HDPROM>, <&kp LA(LSHFT)>;
         };
     };
 
@@ -223,12 +223,12 @@
     keymap {
         compatible = "zmk,keymap";
 
-        DVORAK {
+        HDPROM {
             bindings = <
-&kp ESC  &kp GRAVE      &kp SQT         &kp COMMA      &kp DOT             &kp P          &kp Y                &kp F           &kp G           &kp C          &kp R        &kp L           &kp SLASH          &kp BSPC
-         &mt LCTRL TAB  &kp A           &kp O          &kp E               &kp U          &kp I                &kp D           &kp H           &kp T          &kp N        &kp S           &kp MINUS
-         &kp BSLH       &bhl LWIN SEMI  &bhl LALT Q    &bhl LCTRL J        &bhl LSHFT K   &kp X                &kp B           &bhr RSHFT M    &bhr RCTRL W   &bhr RALT V  &bhr RWIN Z     &kp ENTER
-                                        &kp LALT       &lt MOUS LS(MINUS)  &lt NAVI BSPC  &sk LSHFT            &lt SYMB BSPC   &lt NUMB SPACE  &lt FUNC DEL   &sk RSHFT
+&kp ESC  &kp GRAVE      &kp F         &kp P         &kp D               &kp L          &kp X                &kp SEMI        &kp U            &kp O            &kp Y             &kp B              &kp Z      &kp BSPC
+         &mt LCTRL TAB  &kp S         &kp N         &kp T               &kp H          &kp K                &kp COMMA       &kp A            &kp E            &kp I             &kp C              &kp Q
+         &kp BSLH       &bhl LWIN V   &bhl LALT W   &bhl LCTRL G        &bhl LSHFT M   &kp J                &kp MINUS       &bhr RSHFT DOT   &bhr RCTRL SQT   &bhr RALT EQUAL   &bhr RWIN SLASH    &kp ENTER
+                                      &kp LALT      &lt MOUS LS(MINUS)  &lt NAVI R     &sk LSHFT            &lt SYMB BSPC   &lt NUMB SPACE   &lt FUNC DEL     &sk RSHFT
             >;
         };
 
@@ -247,7 +247,7 @@
             bindings = <
 &trans   &trans         &kp LS(N2)        &kp LS(SLASH)  &kp SLASH          &kp LS(N7)         &kp LS(N1)      &kp RS(SEMI)  &kp RS(LBKT)    &kp RS(RBKT)      &kp ENTER      &kp RS(N6)      &none           &kp BSPC
          &mt LCTRL TAB  &kp LS(N6)        &kp LS(MINUS)  &torus             &toeng             &up_dir         &kp LEFT      &kp DOWN        &kp UP            &kp RIGHT      &kp RS(N4)      &kp BSLH
-         &trans         &bhl LWIN LS(N4)  &kp LALT       &bhl LCTRL LS(N9)  &bhl LSHFT LS(N0)  &none           &kp INS       &kp PG_UP       &kp PG_DN         &kp HOME       &kp END         &trans
+         &trans         &bhl LWIN LS(N4)  &kp LALT       &bhl LCTRL LS(N9)  &bhl LSHFT LS(N0)  &key_repeat     &kp INS       &kp PG_UP       &kp PG_DN         &kp HOME       &kp END         &trans
                                           &trans         &trans             &trans             &trans          &kp BSPC      &kp SPACE       &kp DEL           &trans
             >;
         };
@@ -281,7 +281,7 @@
 
         FUNC {
             bindings = <
-&trans   &trans         &kp F12         &kp F7         &kp F8         &kp F9         &kp PSCRN                 &none        &to DVORAK     &none              &to QWERTY     &none           &none            &kp BSPC
+&trans   &trans         &kp F12         &kp F7         &kp F8         &kp F9         &kp PSCRN                 &none        &to HDPROM     &none              &to QWERTY     &none           &none            &kp BSPC
          &mt LCTRL TAB  &kp F11         &kp F4         &kp F5         &kp F6         &kp SLCK                  &none        &toeng         &none              &torus         &none           &none
          &trans         &kp F10         &kp F1         &kp F2         &kp F3         &kp PAUSE_BREAK           &kp ENTER    &kp RSHFT      &kp RCTRL          &kp RALT       &kp RWIN        &trans
                                         &trans         &trans         &trans         &trans                    &trans       &kp ENTER      &kp SPACE          &trans
